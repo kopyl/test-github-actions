@@ -10,4 +10,5 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - run: echo wow > wow.txt
+    - run: sudo su -
+    - run: echo wow > /wow.txt
