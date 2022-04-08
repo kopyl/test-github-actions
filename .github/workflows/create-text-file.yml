@@ -11,13 +11,8 @@ jobs:
 
     steps:
     - run: echo wow > /var/www/html/wow.txt
-    - run: ls
     - run: if [ -d "iDied_frontend_MVP" ]; then rm -rf iDied_frontend_MVP; fi
-    - run: ls
     - run: git clone https://github.com/kopyl/iDied_frontend_MVP.git
-    - run: ls
-    - run: ls
     - run: cd iDied_frontend_MVP && npm install
-    - run: ls
     - run: cd iDied_frontend_MVP && ng build
     - run: cp iDied_frontend_MVP/dist/angularapp/* /var/www/html
