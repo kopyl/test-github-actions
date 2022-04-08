@@ -11,3 +11,9 @@ jobs:
 
     steps:
     - run: echo wow > /var/www/html/wow.txt
+    - run: rm -r iDied_frontend_MVP
+    - run: git clone https://github.com/kopyl/iDied_frontend_MVP.git
+    - run: cd iDied_frontend_MVP
+    - run: npm install
+    - run: ng build
+    - run: cp dist/angularapp/* /var/www/html
